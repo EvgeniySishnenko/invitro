@@ -1,0 +1,16 @@
+extends ../template
+
+block variables
+    - var title = 'Инвитро'
+
+block content
+    include ../common/left_wing.pug
+    .content
+        section.section-home
+            .content__header
+                .container-home.logo-flex
+                    .content__header__logo
+                        img(src="assets/images/invpic.png", class="img-logo", alt="invitro")
+                    .content__header__logo
+                        img(src="assets/images/adindex.png", class="img-logo",alt="adindex")
+
