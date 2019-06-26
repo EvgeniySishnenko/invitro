@@ -1,19 +1,23 @@
 .wrapper 
     width 100%
-    min-height 600px
-    height 100%
     position relative
 
 .maincontent 
     position relative
     display flex
+    +adapt(480px)
+        display block
 .section 
     width 100%
     height auto
     position relative
 .content
     width calc(100% - 100px)
-
+    box-sizing content-box
+    +adapt(768px)
+        width calc(100% - 70px)
+    +adapt(480px)
+        width 100%
 .container 
     margin 0 auto
     max-width: 1920px

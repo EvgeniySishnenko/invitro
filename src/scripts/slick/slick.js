@@ -2992,44 +2992,36 @@ function slick () {
         return _;
     };
 
-    $('.slider__list').slick({
-        infinite: true,
-        dots: true,
-        dotsClass: 'art-slick-dots',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<button class="slick-prev-art" aria-label="Previous" type="button"><img src="assets/images/art/arrow.jpg"></button>',
-        // prevArrow: '<button class="slick-prev-art" aria-label="Previous" type="button"><svg ><use xlink:href="assets/sprite/sprite.svg#arrow"></use></button>',
-        nextArrow: '<button class="slick-next-art" aria-label="Next" type="button"><img src="assets/images/art/arrow.jpg"></button>',
-        adaptiveHeight: true
-      });
+    // $('.slider__list').slick({
+    //     infinite: true,
+    //     dots: true,
+    //     dotsClass: 'art-slick-dots',
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     prevArrow: '<button class="slick-prev-art" aria-label="Previous" type="button"><img src="assets/images/art/arrow.jpg"></button>',
+    //     // prevArrow: '<button class="slick-prev-art" aria-label="Previous" type="button"><svg ><use xlink:href="assets/sprite/sprite.svg#arrow"></use></button>',
+    //     nextArrow: '<button class="slick-next-art" aria-label="Next" type="button"><img src="assets/images/art/arrow.jpg"></button>',
+    //     adaptiveHeight: true
+    //   });
 
-    let $total = $('.controls__num-total');
-    let $current = $('.controls__num-current');
-    let $slickElement = $('.slider__list-right');
-  
-    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-        let i = (currentSlide ? currentSlide : 0) + 1;
-        $total.text(slick.slideCount);
-        $current.text(i);
-    });  
 
-    $('.slider__list-right').slick({
+
+    $('.slider-right__list').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        prevArrow: '<button class="controls__prev" aria-label="Previous" type="button">&larr;</button>',
-        nextArrow: '<button class="controls__next" aria-label="Next" type="button">&rarr;</button>',
-        asNavFor: '.slider__list-left',
+        arrows: false,
+        asNavFor: '.slider-left__list'
         // autoplay: true
     });
-    $('.slider__list-left').slick({
+    $('.slider-left__list').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        asNavFor: '.slider__list-right',
+        asNavFor: '.slider-right__list',
         focusOnSelect: true,
-        arrows: false
+        prevArrow: '<button class="controls__prev" aria-label="Previous" type="button"><img src="assets/images/arrowPrev.png"></button>',
+        nextArrow: '<button class="controls__next" aria-label="Next" type="button"><img src="assets/images/arrowNext.png"></button>'
+       
     });
 
 }));

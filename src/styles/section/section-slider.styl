@@ -1,0 +1,122 @@
+.section-slider
+    min-height 100vh
+    height auto
+    position relative
+    padding-top 100px
+    // display flex
+    // flex-direction column
+    // justify-content center
+.container-slider
+    width 100%
+ .slider-home
+    position relative
+    overflow hidde
+    display flex
+    align-items center
+    +adapt(1020px)
+        display block
+.slider-left__list,
+.slider-right__list
+    width 50%
+    position relative
+    overflow hidde
+    +adapt(1020px)
+        width 100%
+.slider-right-wr
+    width 60%
+    margin-left 100px
+    +adapt(1600px)
+        width 80%
+        margin-left 80px
+    +adapt(1440px)
+        width 100%
+        margin-left 40px
+    +adapt(1020px)
+        margin-left 0
+        margin-top 40px
+.slider-left__wr-img
+    width 100%
+.slider-left-img
+    display block
+    max-width 100%
+.slider_title
+    font('playfairDisplayBold', 30px, text)
+    line-height: 1.067;
+    +adapt(1440px)
+        font-size: 22px
+.slider_descr
+    font('playfairDisplayRegular', 18px, text)
+    margin-top 30px
+    +adapt(1600px)
+        margin-top 20px
+    +adapt(1440px)
+        font-size 16px
+        margin-top 15px
+.slider_btn-more
+    display inline-flex
+    align-items center
+    height 30px
+    cursor pointer
+    margin-top 30px
+    
+    &:hover
+        .btn-more-arrow
+            margin-left 20px
+    +adapt(1600px)
+        margin-top 20px
+    +adapt(1440px)
+        margin-top 15px
+.btn-more-arrow
+    height 18px
+    margin-left 15px
+    tran()
+    +adapt(1440px)
+        width 35px
+.more-arrow-img
+    display block
+    width 100%
+    height 100%
+
+.btn-more-text 
+    font('robotoSlabBold', 18px, rgba(text, 0.702))
+    text-transform uppercase
+    +adapt(1440px)
+        font-size 16px
+.controls__prev,
+.controls__next
+    width 80px
+    height 50px
+    border none
+    outline none 
+    cursor pointer
+    color white
+    background-color colorBtn
+    position absolute
+    bottom 6px
+    z-index 10
+
+    +adapt(768px)
+        background-color rgba(colorBtn, 0.7)
+        width 60px
+        height 45px
+        img 
+            width 20px
+            height 18px 
+.controls__next
+    right 20px
+.controls__prev
+    right 100px
+    +adapt(768px)
+        right 80px
+.footer
+    position absolute
+    bottom 0
+    width 100%
+    height 300px
+    background url(../images/footer.png) no-repeat
+    background-size cover
+    +adapt(1020px)
+        height 200px
+.footer-img
+    display block
+    max-width 100%

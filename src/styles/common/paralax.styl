@@ -1,0 +1,163 @@
+.paralax
+    position absolute
+    top 0
+    right 0
+    width 900px
+    height 760px
+    z-index -10
+    overflow hidden
+    img
+        display block
+        max-width 100%
+    +adapt(1440px)
+        width 700px
+        height 560px
+.paralax-layer1,
+.paralax-layer2,
+.paralax-layer3,
+.paralax-layer4
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index -10
+    
+.paralax-layer1
+    z-index 0
+    +adapt(768px)
+        display none
+.paralax-layer2
+    z-index 10
+    +adapt(768px)
+        display none
+.paralax-layer3
+    z-index 20
+    +adapt(768px)
+        display none
+.paralax-layer4
+    z-index 15  
+.paralax__doctor-img1
+    position absolute
+    z-index 10
+    transform translate(0, 700px)
+    left 35%
+    width 300px
+    height 400px
+    animation visible1 1s 1s ease-in-out forwards
+    z-index 50
+
+.paralax__doctor-img2
+    position absolute
+    z-index 10
+    transform translate(900px, 290px)
+    width 300px
+    height 350px
+    z-index 40
+    animation visible2 1s 1.5s ease-in-out forwards
+   
+.paralax__doctor-img3
+    position absolute
+    z-index 10
+    transform translate(180px, 780px)
+    width 250px
+    height 300px
+    z-index 40
+    animation visible3 1s 1.5s ease-in-out forwards
+   
+.paralax__doctor-img4
+    position absolute
+    z-index 10
+    transform translate(430px, -385px)
+    width 200px
+    height 250px
+    z-index 30
+    animation visible4 1s 2s ease-in-out forwards
+.paralax__doctor-img5
+    position absolute
+    z-index 10
+    transform translate(230px, -385px)
+    width 230px
+    height 270px
+    z-index 30
+    animation visible5 1.5s 1.9s ease-in-out forwards
+    
+@keyframes visible1
+    0%,10%
+        transform translate(0, 700px)
+    100%
+        transform translate(0, 390px)
+@keyframes visible2
+    0%
+        transform translate(900px, 290px)
+    100%
+        transform translate(450px, 290px)
+@keyframes visible3
+    0%
+        // transform translate(-200px, 280px)
+        transform translate(180px, 780px)
+    100%
+        transform translate(180px, 280px)
+@keyframes visible4
+    0%
+        transform translate(430px, -385px)
+    100%
+        transform translate(430px, 185px)
+@keyframes visible5
+    0%
+        transform translate(230px, -385px)
+    100%
+        transform translate(230px, 140px)
+.paralax-parts1,
+.paralax-parts2,
+.paralax-parts3,
+.paralax-parts4,
+.paralax-parts5,
+.paralax-parts6,
+.paralax-parts7,
+.paralax-parts8,
+.paralax-parts9,
+.paralax-parts10,
+.paralax-parts11
+    position absolute
+    width 50px
+    opacity 0
+    animation parts 2s 3s ease-in-out forwards
+.paralax-parts1
+    bottom 100px
+    left 100px
+.paralax-parts2
+    top 10px
+    left 50%
+.paralax-parts3
+    top 30%
+    right 90px
+.paralax-parts4
+    top 30%
+    left 74px
+.paralax-parts5
+    top 24%
+    left 625px
+.paralax-parts6
+    top 100px
+    left 400px
+.paralax-parts7
+    bottom 47px
+    left 100px
+.paralax-parts8
+    bottom 90px
+    left 190px
+.paralax-parts9
+    bottom 160px
+    left 170px
+.paralax-parts10
+    top 37%
+    left 675px
+.paralax-parts11
+    top 47%
+    left 665px
+@keyframes parts
+    0%
+        opacity 0
+    100%
+        opacity 1
