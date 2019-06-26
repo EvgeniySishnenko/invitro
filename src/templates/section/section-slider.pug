@@ -4,14 +4,14 @@ section.section-slider
             .slider-left__list
                 - for (var i = 0; i < 3; i++) {
                     .slider-left__item
-                        .slider-left__wr-img
+                        a(href="#").slider-left__wr-img
                             img(src="assets/images/pick.png" class="slider-left-img")
                 - }
             .slider-right__list
                 - for (var i = 0; i < 3; i++) {
                     .slider-right__item
                         .slider-right-wr
-                            .slider_title Выпуск №
+                            a(href="#").slider_title Выпуск №
                                 =i
                                 |. Препарируем самые креативные ролики по мнению Warc Creative
                             .slider_descr В первом выпуске врачи-гинекологи поставят диагноз самой креативной рекламе по версии авторитетного рейтинга
@@ -20,5 +20,4 @@ section.section-slider
                                 .btn-more-arrow
                                     img(src="assets/images/arrow.png" class="more-arrow-img")
                 - }
-    .footer
-        //- img(src="assets/images/footer.png" class="footer-img")        
+    .footer      
