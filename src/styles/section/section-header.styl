@@ -1,31 +1,27 @@
+.section-header
+    background-color #e4efff
+    width 100%
+    height 700px
+    position relative
+    overflow hidden
+
 .container-header
-    margin 0 auto
-    max-width 1920px
-    padding-left gap
-    padding-right gap
-    padding-top 70px
+    position relative
+    padding-top 50px
     display flex
     justify-content space-between
-    +adapt(1400px)
-        max-width: 1400px
-        width 100%
-    +adapt(1200px)
-        max-width: 1200px
-        width 100%
-
-    +adapt(992px)
-        max-width: 992px
-        width 100%
+    z-index 60
     +adapt(768px)
-        max-width: 768px
-        width 100% 
-    +adapt(480px)
-        max-width: 480px
-        width 100% 
-        padding-left gap_mob
-        padding-right gap_mob
-    +adapt(320px)
-        min-width 320px
+        flex-direction column
+        align-items center
+        padding-top 40px
+.header-left
+    +adapt(768px)
+        order 2
+        margin-top 20px
+.header-right
+    +adapt(768px)
+        order 1
 .header__link-logo
     display block
     width 200px
@@ -37,26 +33,44 @@
 .header__chk
     display flex
     align-items center
+    
 .chk__img-wr 
     width 90px
     height 40px
+    margin-right 10px
+    +adapt(1540px)
+        width 50px
+        height 30px
+        margin-right 5px
+   
 .chk-img
     display block
     max-width 100%
     height 100%
-    margin-right 10px
+    
 .chk__shrt-text
     font('robotoSlabBold', 42px, colorBtn)
     text-transform uppercase
+    +adapt(1540px)
+        font-size 30px
+    +adapt(768px)
+        font-size 23px
 .header__backwards
-    margin-top 50px
+    margin-top 30px
     display flex
     align-items center
     margin-right 10px
     cursor pointer
+    &:hover
+        .backwards__img-wr
+            transform translateX(-5px)
+    +adapt(768px)
+        margin-top 20px
+        justify-content center
 .backwards__img-wr
+    position relative
     height 18px
-    margin-right 15px
+    margin-right 10px
     transition all ease-in-out .3s
 .backwards__img
     display block
@@ -64,3 +78,13 @@
     height 100%
 .backwards__shrt-text
     font('robotoSlabBold', 18px, rgba(54, 75, 93, 0.702))
+.section-header__bottom-pic
+    position absolute
+    bottom 0
+    left 0
+    width 100%
+    z-index 100
+    height 190px
+    background url(../images/paralax/layer5.png) no-repeat
+    +adapt(992px)
+        display none

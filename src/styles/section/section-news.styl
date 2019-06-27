@@ -1,0 +1,60 @@
+.section-news
+    position relative
+    padding-top 120px
+.container-news
+    margin 0 auto
+    max-width 1250px
+    padding-left gap
+    padding-right gap
+    +adapt(1300px)
+        max-width: 1200px
+        width 100%
+    +adapt(1200px)
+        width 100%
+    +adapt(480px)
+        padding-left gap_mob
+        padding-right gap_mob
+    +adapt(320px)
+        min-width 320px
+.headline-first
+    font('playfairDisplayBold', 36px, text)
+    position absolute
+    top -60px
+    left 50%
+    width 70%
+    transform translateX(-50%)
+    text-align center
+    z-index 100
+    +adapt(1440px)
+        width 80%
+        font-size: 30px
+    +adapt(1440px)
+        font-size: 26px
+    +adapt(768px)
+        font-size: 22px
+        width 90%
+.news__fancybox__link
+    display block
+    width 100%
+    position relative
+    // z-index 10
+.wr__icon-play
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    width 15%
+    height 13%
+    z-index 10
+.news__box-image
+    display block
+    max-width 100%
+.icon-play__img
+    display block
+    max-width 100%
+    height 100%
+.container-news-content
+    margin 0 auto
+    max-width 775px
+    +adapt(790px)
+        width 100%

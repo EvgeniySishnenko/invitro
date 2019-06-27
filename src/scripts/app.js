@@ -6,6 +6,11 @@ window.jQuery = $;
 const fancybox = require("@fancyapps/fancybox");
 const fancyboxShow = require("./fancybox/fancybox");
 const coloringBtnSlider = require("./common/coloringBtnSlider");
+const parallax = require("./common/parallax");
+
+if(document.querySelector('.parallax-header')) {
+    parallax();
+}
 
 if(document.querySelector('.wrapper')) {
     slick();
