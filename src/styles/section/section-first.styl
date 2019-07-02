@@ -5,21 +5,24 @@
     +adapt(992px)
         min-height calc(100vh - 50px)
         padding-top 30px
-        background-color #e4efff 
+        // background-color #e4efff 
     &:after
         content ''
         display block
         position absolute
-        bottom -200px
+        bottom -250px
         right 30px
-        width 200px
-        height 200px
+        width 150px
+        height 150px
         background url(../images/parts/circle.png) no-repeat
         background-repeat no-repeat
         background-size cover
         z-index -100
         +adapt(1440px)
-            bottom 10px
+            bottom -60px
+        +adapt(992px)
+            display none
+
         +adapt(768px)
             right 20px
             bottom 70px
@@ -42,10 +45,7 @@
         +adapt(1440px)
             bottom 20px
         +adapt(992px)
-            width 30px
-            height 30px
-            bottom 0
-            left 20%
+            display none
 .header
     width 100%
 
