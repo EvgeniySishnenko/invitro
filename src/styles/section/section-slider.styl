@@ -1,5 +1,6 @@
 .section-slider
     position relative
+    padding-top 50px
     &:before
         content ''
         display block
@@ -57,6 +58,8 @@
         background-repeat no-repeat
         background-size 100%
         z-index 0
+        +adapt(992px)
+            display none
     +adapt(1020px)
         display block
 .slider-left__list,
@@ -127,7 +130,9 @@
     +adapt(1440px)
         font-size 16px
 .controls__prev,
-.controls__next
+.controls__next,
+.news__controls__prev,
+.news__controls__next
     width 80px
     height 50px
     border none
@@ -136,7 +141,6 @@
     color white
     background-color colorBtn
     position absolute
-    bottom 6px
     z-index 10
 
     +adapt(768px)
@@ -147,12 +151,21 @@
             width 20px
             height 18px 
 .controls__next
-    right 20px
-.controls__prev
     right 100px
+    bottom 6px
+    +adapt(768px)
+        right 0
+.controls__prev
+    right 180px
+    bottom 6px
     +adapt(768px)
         right 80px
-
+.news__controls__prev
+    bottom -20px
+    right 80px
+.news__controls__next
+    bottom -20px
+    right 0px
 .footer
     // position absolute
     // bottom 0

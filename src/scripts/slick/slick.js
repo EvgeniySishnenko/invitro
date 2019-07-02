@@ -2992,17 +2992,16 @@ function slick () {
         return _;
     };
 
-    // $('.slider__list').slick({
-    //     infinite: true,
-    //     dots: true,
-    //     dotsClass: 'art-slick-dots',
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     prevArrow: '<button class="slick-prev-art" aria-label="Previous" type="button"><img src="assets/images/art/arrow.jpg"></button>',
-    //     // prevArrow: '<button class="slick-prev-art" aria-label="Previous" type="button"><svg ><use xlink:href="assets/sprite/sprite.svg#arrow"></use></button>',
-    //     nextArrow: '<button class="slick-next-art" aria-label="Next" type="button"><img src="assets/images/art/arrow.jpg"></button>',
-    //     adaptiveHeight: true
-    //   });
+    $('.slider-news').slick({
+        infinite: true,
+        dots: false,
+        dotsClass: 'art-slick-dots',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button class="news__controls__prev" aria-label="Previous" type="button"><img src="assets/images/arrowPrev.png"></button>',
+        nextArrow: '<button class="news__controls__next" aria-label="Next" type="button"><img src="assets/images/arrowNext.png"></button>',
+        adaptiveHeight: true
+      });
 
 
 

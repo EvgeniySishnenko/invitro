@@ -3,22 +3,23 @@
     position relative
     padding-top 70px
     +adapt(992px)
+        min-height calc(100vh - 50px)
         padding-top 30px
+        background-color #e4efff 
     &:after
         content ''
         display block
         position absolute
-        z-index -10
-        bottom -30px
+        bottom -200px
         right 30px
-        width 330px
-        height 330px
+        width 200px
+        height 200px
         background url(../images/parts/circle.png) no-repeat
         background-repeat no-repeat
         background-size cover
-        z-index -1
-        // +adapt(1024px)
-        //     bottom 0
+        z-index -100
+        +adapt(1440px)
+            bottom 10px
         +adapt(768px)
             right 20px
             bottom 70px
@@ -30,15 +31,16 @@
         content ''
         display block
         position absolute
-        z-index -10
-        bottom 100px
+        bottom -70px
         left 50%
         width 40px
         height 40px
         background url(../images/parts/plus.png) no-repeat
         background-repeat no-repeat
         background-size cover
-        z-index 0
+        z-index -10
+        +adapt(1440px)
+            bottom 20px
         +adapt(992px)
             width 30px
             height 30px
@@ -46,6 +48,7 @@
             left 20%
 .header
     width 100%
+
 .container-home
     margin 0 auto
     padding 0 60px
@@ -74,19 +77,23 @@
 .logo-flex
     display flex
     justify-content space-between
-    +adapt(768px)
-        flex-direction column 
+    
+    +adapt(1440px)
+        display block
+    +adapt(992px)
+        display flex
         align-items center
+        flex-direction column
         
 .link-logo
     display block
-    width 300px
-    height 50px 
+    width 250px
+    height 40px
     text-align center
     +adapt(992px)
-        width 250px
-        height 40px
-    +adapt(768px)
+        width 200px
+        height 35px
+    +adapt(1440px)
         &:last-child
             margin-top 30px
 .img-logo
@@ -98,18 +105,19 @@
         max-width 100%
 .presents
     margin-top 200px
-    +adapt(480px)
+    +adapt(1440px)
         margin-top 50px
-
+    .container-home
+        +adapt(992px)
+            display flex
+            align-items center
+            flex-direction column
 .checkup-img-wr
     width 150px
     height 100px
     +adapt(1440px)
-        width 100px
-        height 70px
-    +adapt(992px)
-        width 70px
-        height 50px 
+        width 50px
+        height 30px 
 .checkup-img
     display block
     max-width 100%
@@ -117,17 +125,23 @@
 .presents__shrt-text
     font('robotoSlabBold', 42px, rgb(0, 0, 0))
     text-transform uppercase
-    +adapt(992px)
-        font-size 30px
-    +adapt(480px)
-        text-align center
+    
+    +adapt(1440px)
+        font-size 32px
+    +adapt(1200px)
+        font-size 28px
 .checkup-box
     width 40%
     position relative
     +adapt(1920px) 
         width 70%
-    +adapt(1200px)  
+    +adapt(1440px)
+        width 60%
+    +adapt(1200px)
+        width 70%
+    +adapt(992px)
         width 100%
+        
         
 .checkup-item
     display flex
@@ -135,7 +149,9 @@
     margin-top 50px
     position relative
     +adapt(1440px)
-        margin-top 30px
+        margin-top 20px
+    +adapt(992px)
+        justify-content center
     +adapt(480px)
         flex-direction column 
         align-items center
@@ -143,21 +159,24 @@
     font('robotoSlabBold', 42px, colorBtn)
     text-transform uppercase
     margin-left 30px
-    +adapt(992px)
+    +adapt(1440px)
+        margin-left 10px
+        font-size 35px
+    +adapt(1200px)
         font-size 30px
-        margin-left 20px
     +adapt(480px)
         font-size 25px
 .checkup__text
-    font('robotoSlabRegular', 24px, text)
+    font('robotoSlabRegular', 30px, text)
     margin-top 50px
     +adapt(1440px)
-        margin-top 30px
+        margin-top 20px
+        font-size 32px
     +adapt(992px)
-        font-size 20px
-    +adapt(480px)
+        font-size 26px
         text-align center
-
+    +adapt(768px)
+        font-size 20px
 .checkup__mouse
     cursor pointer
     position absolute
@@ -165,8 +184,6 @@
     left 200px
     animation opacity 5s infinite
     +adapt(992px)
-        top 150px
-    +adapt(768px)
         display none
 .mouse-img-wr
     position relative
@@ -208,11 +225,11 @@
     tran(all, .5s)
 @keyframes opacity
     0%
-       transform translateY(0) 
+        transform translate(-50%, 0) 
     50%
-       transform translateY(30px) 
+        transform translate(-50%,30px)
     100%
-       transform translateY(0)
+        transform translate(-50%, 0)
 @keyframes opacity1
     0%,40%
         opacity 0
@@ -242,20 +259,25 @@
     100%
         // top 51px
         transform translate(-50%,36px)
-.mouse-mobile
+
+.bcg-mob
     display none
-    +adapt(768px)
+    +adapt(992px)
         display block
-        position absolute
-        bottom 70px
-        left 50%
-        transform translateX(-50%)
-        z-index 20
-        cursor pointer
-    +adapt(480px)
-        bottom 20px
-.mouse-mobile-img-wr
-    width 45px
-    height 90px 
-    +adapt(480px)
-        height 70px 
+        position relative
+        margin-top 50px
+        width 100%
+        height 400px
+        &:after
+            content ''
+            display block
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            background url(../images/paralax/layer6.png) no-repeat
+            background-repeat no-repeat
+            background-size cover
+            background-position 50% 50%
+            z-index 0
