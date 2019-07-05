@@ -2,12 +2,19 @@
     .container-news
         .headline_first Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. 
     .overflow-hiddin
+        img(src="assets/images/parts/plus.png").parts-plus
+        img(src="assets/images/parts/circle.png").parts-circle
+        img(src="assets/images/parts/plus2.png").parts-plus2
+        img(src="assets/images/parts/plus3.png").parts-plus3
+        img(src="assets/images/parts/circle2.png").parts-circle2
+        img(src="assets/images/parts/plus3.png").parts-plus4
+        img(src="assets/images/parts/plus2.png").parts-plus5
         .container-news   
             .news__fancybox
                 a.news__fancybox__link.group(href="https://www.youtube.com/watch?v=iaxVSQtSNzs&autoplay=0&feature=youtu.be")
                     img(src="assets/images/news/pic1.png").news__fancybox-image
                     .wr__icon-play
-                        img(src="assets/images/news/play.png").icon-play__img
+                        img(src="assets/images/play.png").icon-play__img
                 .container-news__text
                     .fancybox__descr
                         .descr-name  by tiffany jow
@@ -44,19 +51,30 @@
                 p In particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work, with the most notable passage excerpted below:
                 p “Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”A 1914 English translation by Harris Rackham reads:
                 p “Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure.”McClintock's eye for detail certainly helped narrow the whereabouts of lorem ipsum's origin, however, the “how and when” still remain something of a mystery, with competing theories and timelines.
-            .news_pic-wr
-                img.news_pic-img(src="assets/images/news/pic.png")
+                a(href="https://www.youtube.com/watch?v=iaxVSQtSNzs&autoplay=0&feature=youtu.be").news_pic-link.group
+                    img.news_pic-img(src="assets/images/news/pic.png")
+                    .wr__icon-play
+                        img(src="assets/images/play.png").icon-play__img
             .container-news__text 
                 p The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.
                 p Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
                 .news_baner-wr
                     img.news_baner-img(src="assets/images/news/baner.png")
                 .other-materials
-                    .other-materials_shrt-text Другие материалы
+                    .other-materials_shrt-text Другие выпуски
                     .slider-news
                         - for (var i = 0; i < 6; i++) {
-                            .slider-item
-                                a(href="#").slider-link__wr-img
-                                    img(src="assets/images/pick.png" class="slider-news-img")
-                                a(href="#").slider_title Lorem ipsum is placeholder  text com-monly used in the graphic Lorem ipsum is placeholder  text com-monly used in the graphic
+                            if i <= 3
+                                .slider-item
+                                    a(href="#").slider-link__wr-img
+                                        img(src="assets/images/pick.png" class="slider-news-img")
+                                    a(href="#").slider_title Lorem ipsum is placeholder  text com-monly used in the graphic Lorem ipsum is placeholder  text com-monly used in the graphic
+                            else if i > 3
+                                .slider-item
+                                    a(href="https://www.youtube.com/watch?v=iaxVSQtSNzs&autoplay=0&feature=youtu.be").group.slider-link__wr-img
+                                        img(src="assets/images/pick.png" class="slider-news-img")
+                                        .wr__icon-play
+                                            img(src="assets/images/play.png").icon-play__img
+                                    a(href="#").slider_title Lorem ipsum is placeholder  text com-monly used in the graphic Lorem ipsum is placeholder  text com-monly used in the graphic
+
                         - }
